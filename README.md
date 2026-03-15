@@ -1,4 +1,4 @@
-# CUSTOM_FASTFETCH It is a custom edited fastfetch file 
+# CUSTOM_FASTFETCH 
 ![fastfetch](reference/fastfetch.png)
 
 
