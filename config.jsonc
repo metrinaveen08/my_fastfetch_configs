@@ -1,0 +1,71 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "kitty",
+        "source": "~/.config/fastfetch/logos/*.png",
+        "width": 60
+    },
+    "display": {
+        "separator": "  "
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "format": "┌────────────────────────────────────────────────────────┐"
+        },
+        {
+          "type": "title",
+          "format": " User: {6}"
+        },
+        // --- Red Section: System Core ---
+        { "type": "os", "key": "🖥️ OS", "keyColor": "red" },
+        { "type": "host", "key": " 🛠️Machine", "keyColor": "red" },
+        { "type": "kernel", "key": " Kernel", "keyColor": "red" },
+        {
+            "type": "command",
+            "key": "   OS Age",
+            "keyColor": "red",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); echo $(((current - birth_install) / 86400)) days"
+        },
+        { "type": "uptime", "key": "   Uptime", "keyColor": "red" },
+        "break",
+
+        // --- Green Section: Software & Environment ---
+        { "type": "packages", "key": "📁 Packages", "keyColor": "green" },
+        { "type": "shell", "key": " Shell", "keyColor": "green" },
+        { "type": "display", "key": " Display", "keyColor": "green" },
+        { "type": "de", "key": " DE", "keyColor": "green" },
+        { "type": "locale", "key": " Locale", "keyColor": "green" },
+        "break",
+
+        // --- Yellow Section: Appearance & Terminal ---
+        { "type": "wm", "key": " WM", "keyColor": "yellow" },
+        { "type": "wmtheme", "key": " WM Theme", "keyColor": "yellow" },
+        { "type": "theme", "key": " Theme", "keyColor": "yellow" },
+        { "type": "icons", "key": " Icons", "keyColor": "yellow" },
+        { "type": "cursor", "key": " Cursor", "keyColor": "yellow" },
+        { "type": "terminal", "key": "  Terminal", "keyColor": "yellow" },
+        { "type": "terminalfont", "key": "  Font", "keyColor": "yellow" },
+        "break",
+
+        // --- Blue Section: Hardware Resources ---
+        { "type": "cpu", "key": " CPU", "keyColor": "blue" },
+        { "type": "gpu", "key": " GPU", "keyColor": "blue" },
+        { "type": "memory", "key": "🎟Memory", "keyColor": "blue" },
+        { "type": "swap", "key": "🎟Swap", "keyColor": "blue" },
+        "break",
+
+        // --- Magenta Section: Utility & Power ---
+        { "type": "disk", "key": "💾Disk", "keyColor": "magenta" },
+        { "type": "localip", "key": "🌐Network", "keyColor": "magenta" },
+        { "type": "battery", "key": "𓋰Battery", "keyColor": "magenta" },
+        { "type": "poweradapter", "key": "🔌Power", "keyColor": "magenta" },
+        "break",
+
+        { "type": "colors", "paddingLeft": 2, "symbol": "circle" },
+        {
+            "type": "custom",
+            "format": "└────────────────────────────────────────────────────────┘"
+        }
+    ]
+}
